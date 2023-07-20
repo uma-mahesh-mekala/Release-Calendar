@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Carter+One&family=Caveat&family=Kanit&family=Playfair+Display&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Release Date Calendar</title>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>Release date Calendar</h1>
+    </div>
+    <form
+      method="post"
+      action="/submit-form"
+      id="form"
+      name="Release date calendar"
+      enctype="multipart/form-data"
+    >
+      <label for="Artist Name">Artist Name *:</label> <br />
+      <input
+        type="text"
+        id="Artist Name"
+        required
+        placeholder="eg: Taylor swift"
+        name="artistName"
+      />
+      <br />
+      <label for="Song Title">Song Title *</label> <br />
+      <input
+        type="text"
+        id="Song Title"
+        required
+        placeholder="eg: Wildest Dreams"
+        name="songTitle"
+      /><br />
+      <label for="date">Date *</label> <br />
+      <input
+        type="date"
+        id="date"
+        required
+        placeholder="eg: 27-oct-2014"
+        name="date"
+      />
+      <br />
+      <label for="Genre">Genre</label> <br />
+      <select name="genre" id="Genre">
+        <option value="Pop">Pop</option>
+        <option value="Rock">Rock</option>
+        <option value="hip hop">Hip Hop</option>
+        <option value="R & B">R&B(Rhythm and Blues)</option>
+        <option value="country">Country</option>
+        <option value="Jazz">Jazz</option>
+        <option value="blues">Blues</option>
+        <option value="electronics">Electronics</option>
+        <option value="classical">Classical</option>
+        <option value="reggae">Reggae</option>
+        <option value="folk">Folk</option>
+        <option value="punk">Punk</option>
+        <option value="Metal">Metal</option>
+        <option value="funk">Funk</option>
+        <option value="soul">Soul</option>
+        <option value="gospel">Gospel</option>
+        <option value="dance">Dance</option>
+        <option value="alternative">Alternative</option>
+        <option value="indie">Indie</option>
+        <option value="latin">Latin</option>
+        <option value="k-pop">K-pop</option>
+      </select>
+      <br />
+      <label for="url">Url (Optional)</label><br />
+      <input
+        type="url"
+        id="url"
+        placeholder="https://www.youtube.com/watch?v=CUr_UwUUXzU"
+        name="url"
+      /><br />
+      <label for="Record Label">Record Label *</label> <br />
+      <input
+        type="Record Label"
+        id="Record Label"
+        required
+        placeholder="Wildest dreams"
+        name="recordLabel"
+      /><br />
+      <label for="image">Upload Picture :</label>
+      <div class="container">
+        <input type="file" id="image" name="image" accept="image/*" /> <br />
+        <img src="" alt="image preview" id="imagePreview" />
+      </div>
+      <button type="submit" name="submit" id="submit">Submit</button>
+    </form>
+    <div id="loader" class="loader"></div>
+    <p class="thank-you hidden">Thank You</p>
+    <button id="new-releases">New releases</button>
+    <div id="app"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
